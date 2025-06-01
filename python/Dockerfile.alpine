@@ -4,6 +4,11 @@ RUN apk add --no-cache \
     build-base \
     libffi-dev \
     openssl-dev \
+    python3-dev \
+    # для numpy потрібні заголовки python3-dev, gfortran тощо
+    gfortran \
+    blas-dev \
+    lapack-dev \
     bash
 
 WORKDIR /app
