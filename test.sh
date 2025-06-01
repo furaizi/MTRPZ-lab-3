@@ -1,2 +1,2 @@
-REPOSITORY   TAG            IMAGE ID       CREATED              SIZE
-lab3         alpine-numpy   db7864eeb900   About a minute ago   807MB
+REPOSITORY   TAG          IMAGE ID       CREATED          SIZE
+lab3         distroless   f34967abff58   17 seconds ago   310MB
