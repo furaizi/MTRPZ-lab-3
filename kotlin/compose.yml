@@ -5,9 +5,9 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_USER: example_user
-      POSTGRES_PASSWORD: example_pass
-      POSTGRES_DB: example_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: jdbc:postgresql://db:5432/postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
@@ -21,9 +21,9 @@ services:
       - db
     restart: on-failure
     environment:
-      DATABASE_URL: jdbc:postgresql://localhost:5432/postgres
-      DATABASE_USER: postgres
-      DATABASE_PASSWORD: postgres
+      POSTGRES_URL: jdbc:postgresql://db:5432/postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
       - "8080:8080"
     networks:
