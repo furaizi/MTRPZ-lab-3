@@ -1,0 +1,9 @@
+FROM gradle:8.4-jdk21
+
+WORKDIR /app
+COPY --chown=gradle:gradle . .
+
+RUN gradle installDist --no-daemon
+EXPOSE 8080
+
+ENTRYPOINT [ "./build/install/ktor-restful-service/bin/ktor-restful-service" ]
