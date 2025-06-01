@@ -7,7 +7,7 @@ RUN gradle clean installDist --no-daemon
 
 
 
-FROM openjdk:21-jre-slim
+FROM openjdk:21-slim
 
 WORKDIR /app
 COPY --from=builder /home/gradle/project/build/install/ktor-restful-service .
